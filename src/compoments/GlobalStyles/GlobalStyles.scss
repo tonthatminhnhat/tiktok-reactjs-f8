@@ -1,11 +1,12 @@
 @import 'normalize.css';
 
 :root {
-   --primary: pink;
+   --primary: rgb(251, 100, 126);
    --default-layout-header-height: 60px;
    --default-layout-width: 1150px;
    --black: #000;
-   --text-color: #333;
+   --text-color: #33333d;
+   --default-layout-horizontal-spacer: 24px;
 }
 html {
    font-size: 62.5%;
@@ -31,4 +32,19 @@ input,
 a[href] {
    color: var(--text-color);
    text-decoration: none;
+}
+//custo tippy toolti
+body {
+   .tippy-box {
+      background-color: rgba(84, 84, 84, 0.92);
+      font-size: 1.6rem;
+      line-height: 2.2rem;
+      font-weight: 500;
+   }
+   .tippy-arrow {
+      color: rgba(84, 84, 84, 0.92);
+   }
+   .tippy-content {
+      padding: 8px 9px;
+   }
 }

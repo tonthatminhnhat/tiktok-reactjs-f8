@@ -11,6 +11,7 @@
    display: flex;
    justify-content: space-between;
    align-items: center;
+   padding: 0px 24px 0px 14px;
 }
 .logo {
    height: 100%;
@@ -19,68 +20,53 @@
    display: flex;
    align-items: center;
 }
-.search {
-   position: relative;
-   display: flex;
-   width: 361px;
-   height: 46px;
-   background-color: rgba(22, 24, 35, 0.06);
-   border-radius: 92px;
-   padding-left: 16px;
-   border: 1px solid rgba(22, 24, 35, 0.06);
-   input {
-      caret-color: var(--primary);
-      flex: 1;
-      color: var(--black);
-      font-size: 1.6rem;
-      background-color: transparent;
-      padding: 14px 0px 13px 0px;
-   }
-   input:not(:placeholder-shown) ~ .search-btn {
-      color: black;
-   }
-   &::after {
-      content: '';
-      position: absolute;
-      width: 0.05rem;
-      top: 9px;
-      right: 52px;
-      height: 28px;
-      background-color: rgba(22, 24, 35, 0.34);
-   }
-   &:hover {
-      border: 1.5px solid rgb(164, 161, 161);
-   }
-   &:focus {
-      border: 1.5px solid rgb(164, 161, 161);
-   }
-}
-.clear,
-.loading {
-   position: absolute;
-   color: rgba(22, 24, 35, 0.34);
-   right: 60px;
-   top: 50%;
-   transform: translateY(-50%);
-}
-
-.search-btn {
-   width: 52px;
-   height: 100%;
-   border-radius: 0px 50px 50px 0px;
-   font-size: 18px;
-   color: rgba(22, 24, 35, 0.34);
-   &:hover {
-      cursor: pointer;
-      background-color: rgba(14, 14, 20, 0.06);
-   }
-   &:active {
-      background-color: rgba(138, 141, 154, 0.06);
-   }
-}
 
 .action {
-   width: 100px;
-   height: 50px;
-   background-color: red;
+   display: flex;
+   align-items: center;
+}
+.custom-login {
+   color: rgb(119, 119, 119);
+}
+
+.action-btn {
+   color: #161823;
+   font-size: 2.2rem;
+   background-color: transparent;
+   padding: 4px 12px;
+   cursor: pointer;
+   margin-top: 8px;
+}
+.more-btn {
+   font-size: 2rem;
+   margin-left: 24px;
+   padding: 9px;
+   cursor: pointer;
+   background-color: transparent;
+}
+
+.user-avatar {
+   height: 36px;
+   width: 36px;
+   object-fit: cover;
+   border-radius: 50%;
+   margin-left: 12px;
+   cursor: pointer;
+}
+.notification {
+   height: 23px;
+   width: 23px;
+   padding: 2px;
+   border-radius: 50%; /* Chuyển thành hình tròn */
+   background-color: red; /* Màu nền là màu đỏ */
+   color: white; /* Màu chữ là trắng */
+   display: flex;
+   align-items: center;
+   position: absolute;
+   right: 0px;
+   top: -6px;
+   font-size: 12px;
+   font-weight: 700;
+   justify-content: center;
+   z-index: 1000;
 }
