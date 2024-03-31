@@ -13,12 +13,12 @@ import classNames from 'classnames/bind';
 import styles from './Header.module.scss';
 import Tippy from '@tippyjs/react';
 
-import Button from '~/compoments/Button';
+import Button from '~/compoments/Button/Button';
 import Menu from '~/compoments/Popper/Menu';
 import 'tippy.js/dist/tippy.css';
-import { IconCloudUpload, IconMessage, IconPlane } from '~/compoments/Icons';
-import Image from '~/compoments/Image';
-import Search from '../../Search';
+import { IconCloudUpload, IconMessage, IconPlane } from '~/compoments/Icons/Icons';
+import Image from '~/compoments/Image/Image';
+import Search from '../../Search/Search';
 
 const cx = classNames.bind(styles);
 const MENU_ITEMS = [

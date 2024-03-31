@@ -1,6 +1,6 @@
 import HeadlessTippy from '@tippyjs/react/headless';
 import PopperWrapper from '~/compoments/Popper/Wrapper';
-import AccountItem from '~/compoments/AccountItem';
+import AccountItem from '~/compoments/AccountItem/AccountItem';
 import { faCircleXmark, faMagnifyingGlass, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames/bind';
@@ -16,22 +16,22 @@ function Search() {
    const [showResult, setShowResult] = useState(true);
    const [loading, setLoading] = useState(false);
 
-   const debounced = useDebounce(searchValue, 500);
+   const debouncedValue = useDebounce(searchValue, 500);
    const inputRef = useRef();
    useEffect(() => {
-      if (!debounced.trim()) {
+      if (!debouncedValue.trim()) {
          setSearchResult([]);
          return;
       }
 
       const fetchApi = async () => {
          setLoading(true);
-         const result = await search(debounced);
+         const result = await search(debouncedValue);
          setSearchResult(result);
          setLoading(false);
       };
       fetchApi();
-   }, [debounced]);
+   }, [debouncedValue]);
    const handleHideResult = () => {
       setShowResult(false);
    };
